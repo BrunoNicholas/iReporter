@@ -34,6 +34,10 @@ a, a:hover {
 }
 .box-left {
 	border: none;
+	overflow-y: auto;
+}
+.box-right {
+	overflow-y: auto;
 }
 .input-text {
 	width: 93%;
