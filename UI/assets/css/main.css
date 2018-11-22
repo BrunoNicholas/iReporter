@@ -1,0 +1,89 @@
+body {
+	margin: 0px;
+	margin-left: 15%;
+	margin-right: 15%;
+	background-color: #e7e7e7;
+}
+header, main, footer {
+	min-height: 100px;
+	min-width: 660px;
+}
+header, footer {
+ 	background-color: #7c334f;
+  	border: 2px solid #7c334f;
+  	padding: 3px;
+  	z-index: 1;
+  	text-align: center;
+}
+header big {
+	color: #ece4d8;
+  	font-size: 1.5em;
+  	font-weight: bolder;
+}
+header small {
+	color: #e69b95;
+  	font: bold italic .80em/1.0 Georgia, Times, “Times New Roman”, serif;
+}
+header h2 {
+  	/* border: thin solid white;*/ 
+  	margin-top: 1px;
+}
+header nav {
+	text-align: right;
+	margin: 1px;
+	padding: 3px;
+	height: 25px;
+}
+header nav li {
+	float: right;
+	margin-right: 1%;
+	min-width: 70px;
+	height: 95%;
+	border-left: thin solid #ece4d8;
+	border-right: thin solid #ece4d8;
+	border-radius: 5px;
+	padding: 1px 5px 1px 5px;
+	list-style: none;
+	text-align: center;
+	font-size: 18px;
+	color: #ece4d8;
+}
+header nav li:hover {
+ 	background-color: #ece4d8;
+ 	font-weight: bold;
+	color: #cd596b;
+}
+header nav li:visited, .li-active {
+ 	background-color: #ece4d8;
+ 	font-weight: bold;
+	color: #cd596b;
+}
+header nav li:active {
+	color: red;
+}
+.border-outer {
+	border: 2px solid #cd596b;
+}
+main {
+	border-left: thin solid #7c334f;
+	border-right:thin solid #7c334f;
+	border-radius: 5px;
+	min-height: 410px;
+	background-color: #f7f7e7;
+}
+aside {
+	float: left;
+	padding: 5px;
+	overflow-y: auto;
+}
+.main-left {
+	min-width: 150px;
+	height: 400px;
+	text-align: center;
+	border-right: thin solid #cd596b;
+}
+footer {
+	color: #e69b95;
+	min-height: auto;
+  	font: bold italic .85em/1.5 Georgia, Times, “Times New Roman”, serif;
+}
