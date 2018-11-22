@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-	<title>Home | iReporter</title>
+	<title>User Profile | iReporter</title>
 	<meta charset="utf-8">
 	<meta name="author" content="Bruno Nicholas Sserunkuma">
 	<meta name="email" content="sbnibro256@gmail.com">
@@ -19,35 +19,34 @@
 				<br>
 				<small>Where citizens bring any form of corruption to the notice of appropriate authorities and the general public</small>
 			</h2>
-			<nav>
-				<a href="register.html"><li>Register</li></a>
-				<a href="login.html"><li>Login</li></a>
-				<a href="terms.html"><li>Terms</li></a>
-				<a href="admin.html"><li>Admin</li></a>
-				<a href="interventions.html"><li>Interventions</li></a>
-				<a href="flags.html"><li>Red Flags</li></a>
-				<a href="index.html"><li class="li-active">Home</li></a>
-			</nav>
-		</div>
+			</div>
 	</header>
 	<main>
-		<aside class="main-left">
-			<img src="assets/images/fav.jpg">
-			<hr>
-			<br>
-			<br>
-			<hr>
-			<a href="profile.html">
-				<button type="button" class="side-buttons">Profile</button>
-			</a>
-			
-
-		</aside>
-		<aside class="main-right">
-			
-
-
-		</aside>
+		<div class="border-outer" style="height: 407px;">
+			<div class="auth-box">
+				<aside class="box-body box-left">
+					About
+					<hr style="border: thin solid #7c334f;">
+					<img src="assets/images/fav.jpg" style="width: 35%;">
+					<p style="text-align: justify; padding: 5px; font-size: 18px;">
+						iReporter is a simple web application that enables any/every citizen to bring any form of corruption to the notice of appropriate authorities and the general public.
+					</p>
+				</aside>
+				<aside class="box-body box-right">
+					<h3>Welcome Back! | iReporter</h3>
+					<form action="home.html" method="POST">
+						<input type="email" class="input-text" name="email" placeholder="Email">
+						<input type="password" class="input-text" name="password" placeholder="Password">
+						<br>
+						<input type="checkbox" name="remember" > Remember Me!
+						<br><br>
+						<button type="submit" class="submit-button">Login</button>
+					</form>
+					<br>
+					<a href="forgot.html">Forgot Password</a> | Not a member? <a href="register.html">Register</a>
+				</aside>
+			</div>
+		</div>
 	</main>
 	<footer>
 		<div class="border-outer" style="padding: 5px;">
