@@ -57,6 +57,7 @@ a, a:hover {
 }
 .box-right {
 	overflow-y: auto;
+	border-left: thin solid red;
 }
 .input-text {
 	width: 93%;
