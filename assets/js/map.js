@@ -22,7 +22,7 @@ function showMap(lat, lon) {
 
 	// Create the Map Options
 	var mapOptions = {
-	  zoom: 8,
+	  zoom: 10,
 	  center: myLatLng,
 	  mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
@@ -34,6 +34,6 @@ function showMap(lat, lon) {
 	var marker = new google.maps.Marker({
 	  position: myLatLng,
 	  map: map,
-	  title: 'Found you!'
+	  title: 'Your iReporter Cordinates!'
 	});
 }
