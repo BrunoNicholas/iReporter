@@ -175,3 +175,12 @@ a, a:hover {
 .text-right {
 	text-align: right;
 }
+.home-map {
+	background-color: #fff;
+	min-height: 300px;
+	min-width: 10%;
+	max-width: 85%;
+	margin: 1%;
+	padding: 5px;
+	border-radius: 5px;
+}
