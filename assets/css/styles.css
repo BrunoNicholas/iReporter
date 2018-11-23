@@ -123,3 +123,55 @@ a, a:hover {
 .main-inner-bottom td {
 	text-align: left;
 }
+.form {
+	background-color: #fff;
+	min-height: 100px;
+	min-width: 10%;
+	max-width: 85%;
+	margin: 1%;
+	padding: 5px;
+	border-radius: 5px;
+}
+.f-group {
+	border: thin solid #e4e8f8;
+	display: block;
+	margin-left: 1%;
+	margin: .5%;
+	padding: 5px;
+	border-radius: 5px;
+}
+.form-lable {
+	float: left;
+	min-width: 30%;
+	margin-top: 9px;
+	font-size: 21px;
+	border-right: thin solid #e4e8f8;
+}
+.form-double {
+	margin-left: 31%;
+	width: 60%;
+	overflow-wrap: all;
+}
+.label-item {
+	margin-left: 31%;
+	width: 60%;
+	min-width: 100px;
+}
+.label-item-left {
+	display: inline-block;
+	margin-left: 1%;
+	width: 25%;
+}
+.label-item-right {
+	display: inline-block;
+	width: 25%;
+	float: inherit;
+}
+.form-button {
+	width: 30%;
+	padding: 10px;
+	min-width: 100px;
+}
+.text-right {
+	text-align: right;
+}
