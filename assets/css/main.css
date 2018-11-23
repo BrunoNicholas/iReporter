@@ -1,7 +1,7 @@
 body {
 	margin: 0px;
-	margin-left: 15%;
-	margin-right: 15%;
+	margin-left: 10%;
+	margin-right: 10%;
 	background-color: #e7e7e7;
 }
 header, main, footer {
@@ -82,8 +82,62 @@ aside {
 	text-align: center;
 	border-right: thin solid #cd596b;
 }
+.main-right {
+	width: 40%;
+	height: 400px;
+	overflow-y: auto;
+	overflow-x: auto;
+	text-align: left;
+	padding: 0px;
+}
 footer {
 	color: #e69b95;
 	min-height: auto;
   	font: bold italic .85em/1.5 Georgia, Times, “Times New Roman”, serif;
+}
+@media only screen and (max-width: 700px){
+	body {
+		margin: 0px;
+	}
+	header, main, footer {
+		min-height: 100px;
+		min-width: 460px;
+	}
+	nav {
+		overflow-x: auto;
+	}
+	main {
+		min-height: 410px;
+	}
+
+}
+@media only screen and (max-width: 600px) {
+	.main-right {
+		width: 65%;
+	}
+}
+@media only screen and (min-width: 650px) {
+	.main-right {
+		width: 65%;
+	}
+}
+@media only screen and (min-width: 700px) {
+	.main-right {
+		width: 75%;
+	}
+}
+@media only screen and (min-width: 710px) {
+	.main-right {
+		width: 65%;
+	}
+}
+@media only screen and (min-width: 870px) {
+	.main-right {
+		width: 70%;
+	}
+}
+@media only screen and (min-width: 900px) {
+	.main-right {
+		width: 80%;
+	}
 }
