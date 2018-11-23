@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-	<title>Interventions | iReporter</title>
+	<title>Create Intervention | iReporter</title>
 	<meta charset="utf-8">
 	<meta name="author" content="Bruno Nicholas Sserunkuma">
 	<meta name="email" content="sbnibro256@gmail.com">
@@ -23,7 +23,7 @@
 				<a href="index.html"><li>Logout</li></a>
 				<a href="terms.html"><li>Terms</li></a>
 				<a href="admin.html"><li>Admin</li></a>
-				<a href="interventions.html"><li class="li-active">Interventions</li></a>
+				<a href="interventions.html"><li>Interventions</li></a>
 				<a href="flags.html"><li>Red Flags</li></a>
 				<a href="home.html"><li>Home</li></a>
 			</nav>
@@ -38,16 +38,10 @@
 				<button type="button" class="side-buttons success"> Home </button>
 			</a>
 			<br>
-			<a href="create2.html">
-				<button class="side-buttons info">Add New</button>
-			</a>
-			<br>
 			<hr>
 			<a href="profile.html">
 				<button type="button" class="side-buttons primary">Profile</button>
-			</a>			
-			
-
+			</a>
 		</aside>
 		<aside class="main-right">
 			<div class="main-home main-inner-top">
@@ -56,7 +50,32 @@
 				<li>Interventions <b>0/0</b></li>
 			</div>
 			<div class="main-home main-inner-bottom">
-
+				<form class="form" action="">
+					<div class="f-group">
+						<label class="form-lable">Title</label>
+						<input type="text" name="title" class="input-text label-item" placeholder="Intervention Title">
+					</div>
+					<div class="f-group">
+						<label class="form-lable">Description</label>
+						<textarea name="description" class="input-text label-item" placeholder="Full Description"></textarea>
+					</div>
+					<div class="f-group">
+						<label class="form-lable">Geolocation Coordinates</label>
+						<div class="form-double">
+							<input type="number" name="title" class="input-text label-item label-item-left" placeholder="Latitudes">
+							<input type="number" name="title" class="input-text label-item label-item-right" placeholder="Longitudes">
+						</div>
+					</div>
+					<div class="f-group">
+						<label class="form-lable">Attach Image/Video</label>
+						<div class="input-text label-item">
+							<input type="file" name="attach" accept=".mp4, .jpg, .png, .3pg, .mpeg, .mpg" style="width: 100%;">
+						</div>
+					</div>
+					<div class="f-group" style="text-align: right;">
+						<button type="submit" class="side-buttons info form-button">Create Intervention</button>
+					</div>
+				</form>
 			</div>
 		</aside>
 	</main>
