@@ -9,6 +9,9 @@ app.secret_key = os.urandom(24)
 def index():
     return ('Welcome to my API!')
 
+@app.route('/red-flag')
+def redFlag():
+    return True
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',port=5060,debug=True)
