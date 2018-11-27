@@ -33,14 +33,14 @@
 		<aside class="main-left">
 			<img src="assets/images/fav.jpg">
 			<hr>
-			<br>
+			<br><a href="home.html">
+				<button type="button" class="side-buttons success"> Home </button>
+			</a>
 			<br>
 			<hr>
 			<a href="profile.html">
 				<button type="button" class="side-buttons primary">Profile</button>
-			</a>		
-			
-
+			</a>
 		</aside>
 		<aside class="main-right">
 			<div class="main-home main-inner-top">
@@ -49,7 +49,44 @@
 				<li>Interventions <b>0/0</b></li>
 			</div>
 			<div class="main-home main-inner-bottom">
-
+				<form class="form" action="">
+					<div class="f-group">
+						<label class="form-lable">Title</label>
+						<input type="text" name="title" class="input-text label-item" placeholder="Red-Flag Title" value="Rakai Lost Medical Funds">
+					</div>
+					<div class="f-group">
+						<label class="form-lable">Description</label>
+						<textarea name="description" class="input-text label-item" placeholder="Full Description">There is a a high corruption and
+							embeselment of funds for rakai district</textarea>
+					</div>
+					<div class="f-group">
+						<label class="form-lable">Geolocation Coordinates</label>
+						<!--<div class="form-double"> -->
+						<div class="input-text label-item">
+							<!-- input-text label-item label-item-left -->
+							<input type="number" name="title" style="width: 45%; margin: 0px; padding: 5px; text-align: center;" value="12.003">
+							<input type="number" name="title" style="width: 45%; margin: 0px; padding: 5px; text-align: center;" value="-0.293">
+						</div>
+					</div>
+					<div class="f-group">
+						<label class="form-lable">Attach Image/Video</label>
+						<div class="input-text label-item">
+							<input type="file" name="attach" accept=".mp4, .jpg, .png, .3pg, .mpeg, .mpg" style="width: 100%; margin: -10px;">
+						</div>
+					</div>
+					<div class="f-group">
+						<label class="form-lable">Message Options</label>
+						<select name="status" class="input-text label-item">
+							<option value="Under Investigation">Under Investigation</option>
+							<option value="Rejected">Rejected</option>
+							<option value="Approved">Approved</option>
+							<option value="Resolved">Resolved</option>
+						</select>
+					</div>
+					<div class="f-group" style="text-align: right;">
+						<button type="submit" class="side-buttons danger form-button">Create Red-Flag</button>
+					</div>
+				</form>
 			</div>
 		</aside>
 	</main>
