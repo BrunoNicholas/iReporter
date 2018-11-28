@@ -76,7 +76,7 @@ def store_intervention():
 
 @ireporter_app.route('/interventions/create')  # creating new
 def create_intervention():
-    pass
+    return jsonify({'Message': 'Operation working, use STORE to create intervention'}), 201
 
 
 @ireporter_app.route('/interventions/<int:id>')  # returning one
