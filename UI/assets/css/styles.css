@@ -31,7 +31,7 @@ a, a:hover {
 	text-decoration: none;
 }
 .auth-box {
-	margin-top: 50px;
+	margin-top: 55px;
 	margin-bottom: 20px;
 	height: auto;
 	margin-left: 20%;
@@ -95,9 +95,6 @@ a, a:hover {
 	text-align: center;
 	padding: 5px;
 }
-.main-inner-bottom {
-	min-height: 320px;
-}
 .main-inner-top li {
 	list-style: none;
 	width: 200px;
@@ -107,6 +104,7 @@ a, a:hover {
 	background-color: #e5e7e7;
 }
 .main-inner-bottom {
+	min-height: 310px;
 	padding: 5px;
 	width: 98%;
 	text-align: center;
@@ -183,4 +181,10 @@ a, a:hover {
 	margin: 1%;
 	padding: 5px;
 	border-radius: 5px;
+}
+.table-item-red {
+	margin: 2px;
+	max-width: 60px;
+	padding: 2px 3px;
+	display: inline-block;
 }

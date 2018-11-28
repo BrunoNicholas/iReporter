@@ -68,7 +68,7 @@ main {
 	border-left: thin solid #7c334f;
 	border-right:thin solid #7c334f;
 	border-radius: 5px;
-	min-height: 410px;
+	min-height: 470px;
 	background-color: #f7f7e7;
 }
 aside {
@@ -78,16 +78,18 @@ aside {
 }
 .main-left {
 	min-width: 150px;
-	height: 400px;
+	height: 461px;
 	text-align: center;
 	border-right: thin solid #cd596b;
 }
 .main-right {
 	width: 40%;
-	height: 400px;
+	height: 461px;
 	overflow-y: auto;
 	overflow-x: auto;
 	text-align: left;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
 	padding: 0px;
 }
 footer {
@@ -138,6 +140,6 @@ footer {
 }
 @media only screen and (min-width: 900px) {
 	.main-right {
-		width: 80%;
+		width: 82%;
 	}
 }

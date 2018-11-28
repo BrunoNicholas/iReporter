@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-	<title>Red Flags | iReporter</title>
+	<title>Red-Flag Details | iReporter</title>
 	<meta charset="utf-8">
 	<meta name="author" content="Bruno Nicholas Sserunkuma">
 	<meta name="email" content="sbnibro256@gmail.com">
@@ -24,7 +24,7 @@
 				<a href="terms.html"><li>Terms</li></a>
 				<a href="admin.html"><li>Admin</li></a>
 				<a href="interventions.html"><li>Interventions</li></a>
-				<a href="flags.html"><li class="li-active">Red Flags</li></a>
+				<a href="flags.html"><li>Red Flags</li></a>
 				<a href="home.html"><li>Home</li></a>
 			</nav>
 		</div>
@@ -38,8 +38,8 @@
 				<button type="button" class="side-buttons success"> Home </button>
 			</a>
 			<br>
-			<a href="create.html">
-				<button type="button" class="side-buttons danger">Add Red-Flag</button>
+			<a href="flags.html">
+				<button type="button" class="side-buttons danger"> Red-Flags </button>
 			</a>
 			<br>
 			<hr>
@@ -54,33 +54,38 @@
 				<li>Interventions <b>0/0</b></li>
 			</div>
 			<div class="main-home main-inner-bottom">
-				<table>
-					<thead>
-						<tr>
-							<th colspan="4">All System Red-Flags</th>
-						</tr>
-						<tr>
-							<th>#</th>
-							<th>Title</th>
-							<th>Status</th>
-							<th>Action</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td style="text-align: center;">
-								<i>1</i>
-								<td>Rakai Lost Medical Funds</td>
-								<td style="text-align:center;">Pending</td>
-								<td style="text-align:center;">
-									<a href="showFlag.html" class="side-buttons table-item-red danger">Details</a>
-									<a href="editFlag.html" class="side-buttons table-item-red primary">Edit</a>
-								</td>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<div id="map" class="home-map"></div>
+				<form class="form" action="">
+					<div class="f-group">
+						<label class="form-lable">Title</label>
+						<input type="text" name="title" class="input-text label-item" value="Rakai Lost Medical Funds" disabled>
+					</div>
+					<div class="f-group">
+						<label class="form-lable">Description</label>
+						<textarea name="description" class="input-text label-item" placeholder="Full Description" disabled>There is a serious theft of funds from the government officials and nothing is done about it
+						</textarea>
+					</div>
+					<div class="f-group">
+						<label class="form-lable">Geolocation Coordinates</label>
+						<!--<div class="form-double"> -->
+						<div class="input-text label-item"> <!-- input-text label-item label-item-left -->
+							<input type="number" name="title" placeholder="Latitudes" style="width: 45%; margin: 0px; padding: 5px; text-align: center;" value="1.525" disabled>
+							<input type="number" name="title" placeholder="Longitudes" style="width: 45%; margin: 0px; padding: 5px; text-align: center;" value="12.525" disabled>
+						</div>
+					</div>
+					<div class="f-group">
+						<label class="form-lable">Image/Video</label>
+						<div class="input-text label-item">
+							<img src="assets/images/red-flag.png" alt="red-flag image" style="max-width:150px;">
+						</div>
+					</div>
+					<div class="f-group">
+						<label class="form-lable">Intervention</label>
+						<input name="status" class="input-text label-item" value="Pending" >
+					</div>
+					<div class="f-group">
+						<button type="submit" class="side-buttons danger form-button" style="margin-left: 35%;">DELETE RED-FLAG</button>
+					</div>
+				</form>
 			</div>
 		</aside>
 	</main>
@@ -92,7 +97,5 @@
 			sbnibro256@gmail.com	<br>
 		</div>
 	</footer>
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-  	<script src="assets/js/map.js"></script>
 </body>
 </html>
