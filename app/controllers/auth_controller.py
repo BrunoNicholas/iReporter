@@ -1,4 +1,8 @@
 from ..models.user import User
 
-def login (self):
-    pass
+
+class AuthController:
+    """docstring for AuthController"""
+
+    def __init__(self):
+        pass

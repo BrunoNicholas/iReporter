@@ -1,19 +1,14 @@
-from flask import Flask, Response, request, jsonify
-from flask_restful import Api
+from app import app
 
-import os
-from datetime import datetime
+# from flask import Flask, Response, request, jsonify
+# from flask_restful import Api
 
-app = Flask(__name__)
-app.secret_key = os.urandom(24) 
+# import os
+# from datetime import datetime
 
-@app.route('/')
-def index():
-    return (jsonify({'notice' : 'Welcome to my API!'}))
+# app = Flask(__name__)
+# app.secret_key = os.urandom(24) 
 
-@app.route('/red-flag')
-def redFlag():
-    return True
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=5060,debug=True)
+    app.run(host='0.0.0.0', port=5060, debug=True)

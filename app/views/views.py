@@ -1,105 +1,141 @@
-from flask import Flask, Blueprint, jsonify, request
-from ..http.controllers import *
-from ..models import *
+from flask import Blueprint, jsonify, request
+
+# from ..controllers.auth_controller import AuthController
+# from ..controllers.map_controller import MapLocatorController
+from ..controllers.user_controller import UserController
+from ..models.db.ireporter import UsersData, RedFlagsData, InterventionsData, LocatorData
+
+# from ..models.locator import GeoLocator
 
 JSON_MIME_TYPE = 'application/json'
 
 ireporter_app = Blueprint('ireporter_app', __name__)
 
+all_users = UsersData()
+all_redFlags = RedFlagsData()
+all_interventions = InterventionsData()
+locations = LocatorData()
+
+ctr_user = UserController()
+
 
 @ireporter_app.route('/', methods=['GET'])
 def index():
-	return (jsonify({'Message' : 'Welcome to the iReporter'}))
+    return jsonify({'Message': 'Welcome to the iReporter'})
+
 
 # Red Flag HTTPs
-@ireporter_app.route('/red-flags') # returning all
+@ireporter_app.route('/red-flags')  # returning all
 def red_flags():
-	pass
+    pass
 
-@ireporter_app.route('/red-flags') # saving one
+
+@ireporter_app.route('/red-flags')  # saving one
 def store_red_flags():
-	pass
+    pass
 
-@ireporter_app.route('/red-flags/create') #creating new
+
+@ireporter_app.route('/red-flags/create')  # creating new
 def create_red_flag():
-	pass
+    pass
 
-@ireporter_app.route('/red-flags/<int:id>') # returning one
-def show_red_flag():
-	pass
 
-@ireporter_app.route('/red-flags/<int:id>') # update one
-def update_red_flag():
-	pass
+@ireporter_app.route('/red-flags/<int:id>')  # returning one
+def show_red_flag(id):
+    pass
 
-@ireporter_app.route('/red-flags/<int:id>') # destroy one
-def destroy_red_flag():
-	pass
 
-@ireporter_app.route('/red-flags/<int:id>/edit') # editing one
-def edit_red_flag():
-	pass
+@ireporter_app.route('/red-flags/<int:id>')  # update one
+def update_red_flag(id):
+    pass
+
+
+@ireporter_app.route('/red-flags/<int:id>')  # destroy one
+def destroy_red_flag(id):
+    pass
+
+
+@ireporter_app.route('/red-flags/<int:id>/edit')  # editing one
+def edit_red_flag(id):
+    pass
+
 
 # end of red-flag resources
-#interventions
-@ireporter_app.route('/interventions') # returning all
+# interventions
+@ireporter_app.route('/interventions')  # returning all
 def interventions():
-	pass
+    pass
 
-@ireporter_app.route('/interventions') # saving one
+
+@ireporter_app.route('/interventions')  # saving one
 def store_intervention():
-	pass
+    pass
 
-@ireporter_app.route('/interventions/create') #creating new
+
+@ireporter_app.route('/interventions/create')  # creating new
 def create_intervention():
-	pass
-
-@ireporter_app.route('/interventions/<int:id>') # returning one
-def show_intervention():
-	pass
-
-@ireporter_app.route('/interventions/<int:id>') # update one
-def update_intervention():
-	pass
-
-@ireporter_app.route('/interventions/<int:id>') # destroy one
-def destroy_intervention():
-	pass
-
-@ireporter_app.route('/interventions/<int:id>/edit') # editing one
-def edit_intervention():
-	pass
+    pass
 
 
-#end of interventions
-#users
-@ireporter_app.route('/users') # returning all
-def all_users():
-	pass
+@ireporter_app.route('/interventions/<int:id>')  # returning one
+def show_intervention(id):
+    pass
 
-@ireporter_app.route('/users') # saving one
+
+@ireporter_app.route('/interventions/<int:id>')  # update one
+def update_intervention(id):
+    pass
+
+
+@ireporter_app.route('/interventions/<int:id>')  # destroy one
+def destroy_intervention(id):
+    pass
+
+
+@ireporter_app.route('/interventions/<int:id>/edit')  # editing one
+def edit_intervention(id):
+    pass
+
+
+# end of interventions
+# users
+@ireporter_app.route('/users', methods=['GET'])  # returning all
+def stored_users():
+    return jsonify({'users': all_users.table()})
+
+
+@ireporter_app.route('/users', methods=['POST'])  # saving one
 def store_user():
-	pass
+    if request.content_type != JSON_MIME_TYPE:
+        return jsonify({'error': 'Invalid Content Type - use JSON'}), 406
+    return ctr_user.store()
 
-@ireporter_app.route('/users/create') #creating new
+
+@ireporter_app.route('/users/create', methods=['GET'])  # creating new
 def create_user():
-	pass
-
-@ireporter_app.route('/users/<int:id>') # returning one
-def show_user():
-	pass
-
-@ireporter_app.route('/users/<int:id>') # update one
-def update_user():
-	pass
-
-@ireporter_app.route('/users/<int:id>') # destroy one
-def destroy_user():
-	pass
-
-@ireporter_app.route('/userss/<int:id>/edit') # editing one
-def edit_user():
-	pass
+    return jsonify({'Message': 'Great, Now use /users to store new user with POST'}), 201
 
 
-# end of user	
+@ireporter_app.route('/users/<int:user_id>', methods=['GET'])  # returning one
+def show_user(user_id):
+    spec_user = ctr_user.show(user_id)
+    return spec_user
+    # return jsonify({'Message': 'User not found or unknown'}), 403
+
+
+@ireporter_app.route('/users/<int:user_id>/edit', methods=['GET'])  # editing one
+def edit_user(user_id):
+    pass
+
+
+@ireporter_app.route('/users/<int:user_id>', methods=['PUT'])  # update one
+def update_user(user_id):
+    pass
+
+
+@ireporter_app.route('/users/<int:user_id>', methods=['DELETE'])  # destroy one
+def destroy_user(user_id):
+    pass
+
+
+# end of user
