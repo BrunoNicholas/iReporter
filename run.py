@@ -1,13 +1,14 @@
-from flask import Flask, Response, request
-import os
+from flask import Flask, Response, request, jsonify
 
+import os
+from datetime import datetime
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24) 
 
 @app.route('/')
 def index():
-    return ('Welcome to my API!')
+    return (jsonify({'notice' : 'Welcome to my API!'}))
 
 @app.route('/red-flag')
 def redFlag():
