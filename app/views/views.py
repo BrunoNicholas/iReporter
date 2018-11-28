@@ -1,8 +1,8 @@
 from flask import Blueprint, jsonify, request
 
-# from ..controllers.auth_controller import AuthController
-# from ..controllers.map_controller import MapLocatorController
 from ..controllers.user_controller import UserController
+from ..controllers.red_flag_controller import RedFlagController
+from ..controllers.intervention_controller import InterventionController
 from ..models.db.ireporter import UsersData, RedFlagsData, InterventionsData, LocatorData
 
 # from ..models.locator import GeoLocator
@@ -16,7 +16,9 @@ all_redFlags = RedFlagsData()
 all_interventions = InterventionsData()
 locations = LocatorData()
 
-ctr_user = UserController()
+ctr_user 	= UserController()
+ctr_inter 	= InterventionController()
+ctr_flag 	= RedFlagController()
 
 
 @ireporter_app.route('/', methods=['GET'])
@@ -27,7 +29,7 @@ def index():
 # Red Flag HTTPs
 @ireporter_app.route('/red-flags')  # returning all
 def red_flags():
-    pass
+    return jsonify({'Red-Flags': all_redFlags.table()})
 
 
 @ireporter_app.route('/red-flags')  # saving one
@@ -64,7 +66,7 @@ def edit_red_flag(id):
 # interventions
 @ireporter_app.route('/interventions')  # returning all
 def interventions():
-    pass
+    return jsonify({'Interventions': all_interventions.table()})
 
 
 @ireporter_app.route('/interventions')  # saving one
