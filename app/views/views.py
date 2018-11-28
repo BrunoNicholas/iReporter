@@ -127,17 +127,21 @@ def show_user(user_id):
 
 @ireporter_app.route('/users/<int:user_id>/edit', methods=['GET'])  # editing one
 def edit_user(user_id):
-    pass
+    spec_user = ctr_user.edit(user_id)
+    return spec_user
 
 
 @ireporter_app.route('/users/<int:user_id>', methods=['PUT'])  # update one
 def update_user(user_id):
-    pass
+    if request.content_type != JSON_MIME_TYPE:
+        return jsonify({'error': 'Invalid Content Type - use JSON'}), 406
+    return ctr_user.update(user_id)
 
 
 @ireporter_app.route('/users/<int:user_id>', methods=['DELETE'])  # destroy one
 def destroy_user(user_id):
-    pass
+    spec_user = ctr_user.destroy(user_id)
+    return spec_user
 
 
 # end of user
