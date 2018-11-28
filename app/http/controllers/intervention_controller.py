@@ -1,2 +1,2 @@
-from app.models.intervention import Intervention
+from ...models.intervention import Intervention
 

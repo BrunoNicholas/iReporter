@@ -1,5 +1,6 @@
 import datetime
 
+from db.ireportter import UserData
 
 class User:
     ''' This id the model class for the user or users '''
