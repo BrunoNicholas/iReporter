@@ -46,23 +46,24 @@ def create_red_flag():
 
 @ireporter_app.route('/red-flags/<int:red_id>', methods=['GET'])  # returning one
 def show_red_flag(red_id):
-    spec_flag = ctr_flag.show(red_id)
-    return spec_flag
+    return ctr_flag.show(red_id)
 
 
 @ireporter_app.route('/red-flags/<int:red_id>', methods=['PUT'])  # update one
 def update_red_flag(red_id):
-    pass
+    if request.content_type != JSON_MIME_TYPE:
+        return jsonify({'error': 'Invalid Content Type - use JSON'}), 406
+    return ctr_flag.update(red_id)
 
 
 @ireporter_app.route('/red-flags/<int:red_id>', methods=['DELETE'])  # destroy one
 def destroy_red_flag(red_id):
-    pass
+    return ctr_flag.destroy(red_id)
 
 
 @ireporter_app.route('/red-flags/<int:red_id>/edit', methods=['GET'])  # editing one
 def edit_red_flag(red_id):
-    pass
+    return ctr_flag.edit(red_id)
 
 
 # end of red-flag resources
@@ -86,23 +87,24 @@ def create_intervention():
 
 @ireporter_app.route('/interventions/<int:int_id>', methods=['GET'])  # returning one
 def show_intervention(int_id):
-    spec_intervention = ctr_inter.show(int_id)
-    return spec_intervention
+    return ctr_inter.show(int_id)
 
 
 @ireporter_app.route('/interventions/<int:int_id>', methods=['PUT'])  # update one
 def update_intervention(int_id):
-    pass
+    if request.content_type != JSON_MIME_TYPE:
+        return jsonify({'error': 'Invalid Content Type - use JSON'}), 406
+    return ctr_inter.update(int_id)
 
 
 @ireporter_app.route('/interventions/<int:int_id>', methods=['DELETE'])  # destroy one
 def destroy_intervention(int_id):
-    pass
+    return ctr_inter.destroy(int_id)
 
 
 @ireporter_app.route('/interventions/<int:int_id>/edit', methods=['GET'])  # editing one
 def edit_intervention(int_id):
-    pass
+    return ctr_inter.edit(int_id)
 
 
 # end of interventions
@@ -126,15 +128,13 @@ def create_user():
 
 @ireporter_app.route('/users/<int:user_id>', methods=['GET'])  # returning one
 def show_user(user_id):
-    spec_user = ctr_user.show(user_id)
-    return spec_user
+    return ctr_user.show(user_id)
     # return jsonify({'Message': 'User not found or unknown'}), 403
 
 
 @ireporter_app.route('/users/<int:user_id>/edit', methods=['GET'])  # editing one
 def edit_user(user_id):
-    spec_user = ctr_user.edit(user_id)
-    return spec_user
+    return ctr_user.edit(user_id)
 
 
 @ireporter_app.route('/users/<int:user_id>', methods=['PUT'])  # update one
