@@ -46,8 +46,7 @@ def create_red_flag():
 
 @ireporter_app.route('/red-flags/<int:red_id>', methods=['GET'])  # returning one
 def show_red_flag(red_id):
-    spec_flag = ctr_flag.show(red_id)
-    return spec_flag
+    return ctr_flag.show(red_id)
 
 
 @ireporter_app.route('/red-flags/<int:red_id>', methods=['PUT'])  # update one
@@ -86,8 +85,7 @@ def create_intervention():
 
 @ireporter_app.route('/interventions/<int:int_id>', methods=['GET'])  # returning one
 def show_intervention(int_id):
-    spec_intervention = ctr_inter.show(int_id)
-    return spec_intervention
+    return ctr_inter.show(int_id)
 
 
 @ireporter_app.route('/interventions/<int:int_id>', methods=['PUT'])  # update one
@@ -126,8 +124,7 @@ def create_user():
 
 @ireporter_app.route('/users/<int:user_id>', methods=['GET'])  # returning one
 def show_user(user_id):
-    spec_user = ctr_user.show(user_id)
-    return spec_user
+    return ctr_user.show(user_id)
     # return jsonify({'Message': 'User not found or unknown'}), 403
 
 
