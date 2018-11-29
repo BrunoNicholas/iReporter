@@ -98,9 +98,9 @@ class RedFlagController:
         try:
             stored_flag = [flg for flg in self.sys_flags.table() if flg['red_id'] == red_id]
 
-            self.sys_flags.table().remove(stored_flag)
+            self.sys_flags.table().remove(red_id)
 
-            return jsonify({'Message': 'Red-Flag record deleted successfully!'}), 200
+            return jsonify({'Message': 'Red-Flag record deleted successfully!'},{'Red-Flag {}'.format(red_id):stored_flag}), 200
 
         except IndexError:
             return jsonify({'error': 'Not found, Red-Flag unavailable'}), 400

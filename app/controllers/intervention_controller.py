@@ -98,9 +98,9 @@ class InterventionController:
         try:
             saved_interv = [interv for interv in self.sys_interventions.table() if interv['int_id'] == int_id]
 
-            self.sys_interventions.table().remove(saved_interv)
+            self.sys_interventions.table().remove(int_id)
 
-            return jsonify({'Message': 'Intervention record deleted successfully!'}), 200
+            return jsonify({'Message': 'Intervention record deleted successfully!'},{'Intervention {}'.format(int_id):saved_interv}), 200
 
         except IndexError:
             return jsonify({'error': 'Not found, intervention unavailable!'}), 400

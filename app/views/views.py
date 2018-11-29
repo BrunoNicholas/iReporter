@@ -104,7 +104,7 @@ def destroy_intervention(int_id):
 
 @ireporter_app.route('/interventions/<int:int_id>/edit', methods=['GET'])  # editing one
 def edit_intervention(int_id):
-    return create_intervention.edit(int_id)
+    return ctr_inter.edit(int_id)
 
 
 # end of interventions
