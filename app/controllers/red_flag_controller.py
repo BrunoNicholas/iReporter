@@ -97,9 +97,8 @@ class RedFlagController:
         """ this function reads a red-flag's details and deletes them """
         try:
             stored_flag = [flg for flg in self.sys_flags.table() if flg['red_id'] == red_id]
-
+            
             self.sys_flags.table().remove(red_id)
-
             return jsonify({'Message': 'Red-Flag record deleted successfully!'},{'Red-Flag {}'.format(red_id):stored_flag}), 200
 
         except IndexError:
