@@ -51,12 +51,14 @@ def show_red_flag(red_id):
 
 @ireporter_app.route('/red-flags/<int:red_id>', methods=['PUT'])  # update one
 def update_red_flag(red_id):
-    pass
+    if request.content_type != JSON_MIME_TYPE:
+        return jsonify({'error': 'Invalid Content Type - use JSON'}), 406
+    return ctr_flag.update(red_id)
 
 
 @ireporter_app.route('/red-flags/<int:red_id>', methods=['DELETE'])  # destroy one
 def destroy_red_flag(red_id):
-    pass
+    return ctr_flag.destroy(red_id)
 
 
 @ireporter_app.route('/red-flags/<int:red_id>/edit', methods=['GET'])  # editing one
@@ -90,17 +92,19 @@ def show_intervention(int_id):
 
 @ireporter_app.route('/interventions/<int:int_id>', methods=['PUT'])  # update one
 def update_intervention(int_id):
-    pass
+    if request.content_type != JSON_MIME_TYPE:
+        return jsonify({'error': 'Invalid Content Type - use JSON'}), 406
+    return ctr_inter.update(int_id)
 
 
 @ireporter_app.route('/interventions/<int:int_id>', methods=['DELETE'])  # destroy one
 def destroy_intervention(int_id):
-    pass
+    return ctr_inter.destroy(int_id)
 
 
 @ireporter_app.route('/interventions/<int:int_id>/edit', methods=['GET'])  # editing one
 def edit_intervention(int_id):
-    return create_intervention.edit(int_id)
+    return ctr_inter.edit(int_id)
 
 
 # end of interventions

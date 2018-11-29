@@ -1,5 +1,7 @@
 from flask import jsonify, request
 
+import json
+
 from ..models.db.ireporter import UsersData
 from ..models.user import User
 
@@ -83,10 +85,9 @@ class UserController:
         """ this function reads a user's details and deletes them """
         try:
             stored_user = [usr for usr in self.sys_users.table() if usr['user_id'] == user_id]
-
-            self.sys_users.table().remove(stored_user)
-
-            return jsonify({'Message': 'User Profile Deleted Successfully!'}), 200
+            
+            self.sys_users.table().remove(user_id)
+            return jsonify({'Message': 'User Profile Deleted Successfully!'},{'User {}'.format(user_id):stored_user}), 200
 
         except IndexError:
             return jsonify({'error': 'Not found, User unavailable'}), 400
