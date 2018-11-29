@@ -1,5 +1,4 @@
 from flask import jsonify, request
-import json
 
 from ..models.db.ireporter import UsersData
 from ..models.user import User
