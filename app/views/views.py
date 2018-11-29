@@ -61,7 +61,7 @@ def destroy_red_flag(red_id):
 
 @ireporter_app.route('/red-flags/<int:red_id>/edit', methods=['GET'])  # editing one
 def edit_red_flag(red_id):
-    pass
+    return ctr_flag.edit(red_id)
 
 
 # end of red-flag resources
@@ -100,7 +100,7 @@ def destroy_intervention(int_id):
 
 @ireporter_app.route('/interventions/<int:int_id>/edit', methods=['GET'])  # editing one
 def edit_intervention(int_id):
-    pass
+    return create_intervention.edit(int_id)
 
 
 # end of interventions
@@ -130,8 +130,7 @@ def show_user(user_id):
 
 @ireporter_app.route('/users/<int:user_id>/edit', methods=['GET'])  # editing one
 def edit_user(user_id):
-    spec_user = ctr_user.edit(user_id)
-    return spec_user
+    return ctr_user.edit(user_id)
 
 
 @ireporter_app.route('/users/<int:user_id>', methods=['PUT'])  # update one
