@@ -1,20 +1,22 @@
+from flask import jsonify, request
+
 from ..models.db.ireporter import RedFlagsData
 from ..models.red_flag import RedFlag
 
 
 class RedFlagController:
-    """docstring for RedFlagController"""
+    """the controller for both endpoints and literating through the red-falgs"""
 
     def __init__(self):
         self.sys_flags = RedFlagsData()
 
     def index(self):
-    	""" the function to return all records """
-    	try:
-    		return jsonify(self.sys_flags), 200
+        """ the function to return all records """
+        try:
+            return jsonify(self.sys_flags), 200
 
-    	except IndexError:
-    		return jsonify({'error': 'There is an internal problem'}), 500
+        except IndexError:
+            return jsonify({'error': 'There is an internal problem'}), 500
 
     def create(self):
         """ this function returns entry to store a red-flag """
@@ -55,7 +57,7 @@ class RedFlagController:
             self.sys_flags.table(new_flag.__dict__)
             return jsonify({'Message': 'Red-Flag added Successfully', 'Red-Flag': new_flag.__dict__}), 200
 
-    def show(self,red_id):
+    def show(self, red_id):
         """ this function returns the details of a specific red-flag """
         try:
             stored_flag = [flg for flg in self.sys_flags.table() if flg['red_id'] == red_id]
@@ -80,7 +82,7 @@ class RedFlagController:
             data = request.json
             stored_flag = [flg for flg in self.sys_flags.table() if flg['red_id'] == red_id]
 
-            stored_flag[0]['title']  = data.get('title')
+            stored_flag[0]['title'] = data.get('title')
             stored_flag[0]['description'] = data.get('description')
             stored_flag[0]['latitude'] = data.get('latitude')
             stored_flag[0]['longitude'] = data.get('longitude')
@@ -95,11 +97,9 @@ class RedFlagController:
         """ this function reads a red-flag's details and deletes them """
         try:
             stored_flag = [flg for flg in self.sys_flags.table() if flg['red_id'] == red_id]
-
-            self.sys_flags.table().remove(stored_flag)
-
-            return jsonify({'Message': 'Red-Flag record deleted successfully!'}), 200
+            
+            self.sys_flags.table().remove(red_id)
+            return jsonify({'Message': 'Red-Flag record deleted successfully!'},{'Red-Flag {}'.format(red_id):stored_flag}), 200
 
         except IndexError:
             return jsonify({'error': 'Not found, Red-Flag unavailable'}), 400
-
