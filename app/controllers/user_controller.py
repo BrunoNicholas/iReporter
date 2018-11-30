@@ -91,3 +91,5 @@ class UserController:
 
         except IndexError:
             return jsonify({'error': 'Not found, User unavailable'}), 400
+
+            
