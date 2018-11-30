@@ -1,0 +1,46 @@
+class UsersData:
+    """ This list stands as the database table for the users """
+
+    def __init__(self):
+        self.users = [0]
+
+    def table(self, values=None):
+        if values:
+            self.users.append(values)
+        return self.users
+
+
+class RedFlagsData:
+    """ This list stands as the database table for the red flags """
+
+    def __init__(self):
+        self.redFlags = [0]
+
+    def table(self, values=None):
+        if values:
+            self.redFlags.append(values)
+        return self.redFlags
+
+
+class InterventionsData:
+    """ This list stands as the database table for the interventions """
+
+    def __init__(self):
+        self.interventions = [0]
+
+    def table(self, values=None):
+        if values:
+            self.interventions.append(values)
+        return self.interventions
+
+
+class LocatorData:
+    """ This list stands as the database table for the location coordinates on the map """
+
+    def __init__(self):
+        self.locations = [0]
+
+    def table(self, values=None):
+        if values:
+            self.locations.append(values)
+        return self.locations
