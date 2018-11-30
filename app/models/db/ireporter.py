@@ -2,7 +2,7 @@ class UsersData:
     """ This list stands as the database table for the users """
 
     def __init__(self):
-        self.users = [0]
+        self.users = ['0']
 
     def table(self, values=None):
         if values:
@@ -14,7 +14,7 @@ class RedFlagsData:
     """ This list stands as the database table for the red flags """
 
     def __init__(self):
-        self.redFlags = [0]
+        self.redFlags = []
 
     def table(self, values=None):
         if values:
@@ -26,7 +26,7 @@ class InterventionsData:
     """ This list stands as the database table for the interventions """
 
     def __init__(self):
-        self.interventions = [0]
+        self.interventions = []
 
     def table(self, values=None):
         if values:
@@ -38,7 +38,7 @@ class LocatorData:
     """ This list stands as the database table for the location coordinates on the map """
 
     def __init__(self):
-        self.locations = [0]
+        self.locations = []
 
     def table(self, values=None):
         if values:

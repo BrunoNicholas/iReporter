@@ -103,3 +103,5 @@ class InterventionController:
 
         except IndexError:
             return jsonify({'error': 'Not found, intervention unavailable!'}), 400
+
+            

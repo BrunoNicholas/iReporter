@@ -23,7 +23,7 @@ ctr_flag 	= RedFlagController()
 
 @ireporter_app.route('/', methods=['GET'])
 def index():
-    return jsonify({'Message': 'Welcome to the iReporter'})
+    return jsonify({'status':200,'Message': 'Welcome to the iReporter'})
 
 
 # Red Flag HTTPs
@@ -35,13 +35,13 @@ def red_flags():
 @ireporter_app.route('/red-flags', methods=['POST'])  # saving one
 def store_red_flags():
     if request.content_type != JSON_MIME_TYPE:
-        return jsonify({'error': 'Invalid Content Type - use JSON'}), 406
+        return jsonify({'status':406,'error': 'Invalid Content Type - use JSON'}), 406
     return ctr_flag.store()
 
 
 @ireporter_app.route('/red-flags/create', methods=['GET'])  # creating new
 def create_red_flag():
-    return jsonify({'Message': 'Great, Now use /red-flags to store new user with POST'}), 201
+    return jsonify({'status':201,'Message': 'Great, Now use /red-flags to store new user with POST'}), 201
 
 
 @ireporter_app.route('/red-flags/<int:red_id>', methods=['GET'])  # returning one
@@ -52,7 +52,7 @@ def show_red_flag(red_id):
 @ireporter_app.route('/red-flags/<int:red_id>', methods=['PUT'])  # update one
 def update_red_flag(red_id):
     if request.content_type != JSON_MIME_TYPE:
-        return jsonify({'error': 'Invalid Content Type - use JSON'}), 406
+        return jsonify({'status':406,'error': 'Invalid Content Type - use JSON'}), 406
     return ctr_flag.update(red_id)
 
 
@@ -76,13 +76,13 @@ def interventions():
 @ireporter_app.route('/interventions', methods=['POST'])  # saving one
 def store_intervention():
     if request.content_type != JSON_MIME_TYPE:
-        return jsonify({'error': 'Invalid Content Type - use JSON'}), 406
+        return jsonify({'status':406,'error': 'Invalid Content Type - use JSON'}), 406
     return ctr_inter.store()
 
 
 @ireporter_app.route('/interventions/create', methods=['GET'])  # creating new
 def create_intervention():
-    return jsonify({'Message': 'Operation working, use STORE to create /interventions'}), 201
+    return jsonify({'status':201,'Message': 'Operation working, use STORE to create /interventions'}), 201
 
 
 @ireporter_app.route('/interventions/<int:int_id>', methods=['GET'])  # returning one
@@ -93,7 +93,7 @@ def show_intervention(int_id):
 @ireporter_app.route('/interventions/<int:int_id>', methods=['PUT'])  # update one
 def update_intervention(int_id):
     if request.content_type != JSON_MIME_TYPE:
-        return jsonify({'error': 'Invalid Content Type - use JSON'}), 406
+        return jsonify({'status':406,'error': 'Invalid Content Type - use JSON'}), 406
     return ctr_inter.update(int_id)
 
 
@@ -117,13 +117,13 @@ def stored_users():
 @ireporter_app.route('/users', methods=['POST'])  # saving one
 def store_user():
     if request.content_type != JSON_MIME_TYPE:
-        return jsonify({'error': 'Invalid Content Type - use JSON'}), 406
+        return jsonify({'status':406,'error': 'Invalid Content Type - use JSON'}), 406
     return ctr_user.store()
 
 
 @ireporter_app.route('/users/create', methods=['GET'])  # creating new
 def create_user():
-    return jsonify({'Message': 'Great, Now use /users to store new user with POST'}), 201
+    return jsonify({'status':201,'Message': 'Great, Now use /users to store new user with POST'}), 201
 
 
 @ireporter_app.route('/users/<int:user_id>', methods=['GET'])  # returning one
@@ -140,7 +140,7 @@ def edit_user(user_id):
 @ireporter_app.route('/users/<int:user_id>', methods=['PUT'])  # update one
 def update_user(user_id):
     if request.content_type != JSON_MIME_TYPE:
-        return jsonify({'error': 'Invalid Content Type - use JSON'}), 406
+        return jsonify({'status':406,'error': 'Invalid Content Type - use JSON'}), 406
     return ctr_user.update(user_id)
 
 
