@@ -103,3 +103,5 @@ class RedFlagController:
 
         except IndexError:
             return jsonify({'error': 'Not found, Red-Flag unavailable'}), 400
+
+            
