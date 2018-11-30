@@ -1,5 +1,5 @@
 import unittest
-from models.db.ireporter import UsersData
+from app import app
 import json
 
 
