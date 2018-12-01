@@ -63,4 +63,4 @@ Thanks!
 
 ------------------------------------------------------------------------------------------
 *Developed By*
-**Bruno Nicholas Sserunkum**, **sbnibro256@gmail.com**
+**Bruno Nicholas Sserunkuma**, **sbnibro256@gmail.com**
