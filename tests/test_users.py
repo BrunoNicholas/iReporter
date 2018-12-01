@@ -6,7 +6,7 @@ import json
 
 class UserTestCase(unittest.TestCase):
 	def setup(self):
-		pass
+		self.app = create_app(config_name="testing_users")
 
 	def tearDown(self):
 		pass

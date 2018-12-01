@@ -6,7 +6,7 @@ import json
 
 class RedFlagTestCase(unittest.TestCase):
 	def setup(self):
-		pass
+		self.app = create_app(config_name="testing_flags")
 
 	def tearDown(self):
 		pass
