@@ -52,7 +52,7 @@ Heroku: This app is hosted at [iReporter](https://ireporter-v01.herokuapp.com/) 
    
    ```git clone https://github.com/BrunoNicholas/iReporter.git```
    
-2.Hopefully you installed python, create a virtual environment 
+2. Hopefully you installed python, create a virtual environment 
 
 e.g. ```venv``` and activate it with the operating system you have.
 
