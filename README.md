@@ -54,7 +54,7 @@ Heroku: This app is hosted at [iReporter](https://ireporter-v01.herokuapp.com/) 
    
 2.Hopefully you installed python, create a virtual environment 
 
-e.g. ```venv`` and activate it with the operating system you have.
+e.g. ```venv``` and activate it with the operating system you have.
 
    i.e. ```#source venv/bin/activate``` for linux, or ```#venv/Scripts/activate.bat``` for windows 
 
