@@ -69,9 +69,9 @@
 						<label class="form-lable">Geolocation Coordinates</label>
 						<!-- <div class="form-double"> -->
 						<div class="input-text label-item">
-							<input type="number" name="title" class="" placeholder="Latitudes" style="width: 45%; margin: 0px; padding: 5px; text-align: center;">
+							<input type="number" name="title" value="<script>longs()</script>" placeholder="Latitudes" style="width: 45%; margin: 0px; padding: 5px; text-align: center;">
 							<!-- input-text label-item label-item-left -->
-							<input type="number" name="title" class="" placeholder="Longitudes" style="width: 45%; margin: 0px; padding: 5px; text-align: center;">
+							<input type="number" name="title" value="" placeholder="Longitudes" style="width: 45%; margin: 0px; padding: 5px; text-align: center;">
 							<!-- input-text label-item label-item-right -->
 						</div>
 					</div>
@@ -103,5 +103,20 @@
 			sbnibro256@gmail.com	<br>
 		</div>
 	</footer>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+	<script>
+		if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(function (position) {
+					var lat = position.coords.latitude;
+					var lon = position.coords.longitude;
+				});
+				function longs() {
+					return lon;
+				}
+				function lats() {
+					return lat;
+				}
+			}
+	</script>
 </body>
 </html>
