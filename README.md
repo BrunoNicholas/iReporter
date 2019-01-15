@@ -1,4 +1,6 @@
-![Build Status](https://travis-ci.org/BrunoNicholas/iReporter.svg?branch=Develope) [![Coverage Status](https://coveralls.io/repos/github/BrunoNicholas/iReporter/badge.svg?branch=Develope)](https://coveralls.io/github/BrunoNicholas/iReporter?branch=Develope)
+[![Build Status](https://travis-ci.org/BrunoNicholas/iReporter.svg?branch=Develope)](https://travis-ci.org/BrunoNicholas/iReporter)
+
+(https://coveralls.io/repos/github/BrunoNicholas/iReporter/badge.svg?branch=Develope)](https://coveralls.io/github/BrunoNicholas/iReporter?branch=Develope)
 
 # iReporter | The API Endpoints
 iReporter is a simple web application that enables any/every citizen to bring any form of corruption to the notice of appropriate authorities and the general public.
@@ -6,11 +8,12 @@ iReporter is a simple web application that enables any/every citizen to bring an
 In this case, users can also report on things that needs government intervention.
 
 ### The Challenges
-  1. [Challenge 1](https://github.com/BrunoNicholas/iReporter/wiki) Work Procedure
-  2. [Challenge 2](https://github.com/BrunoNicholas/iReporter/wiki/Creation-of-an-API-endpoints) Work Process Guidelines
-  
 
+1. [Challenge 1](https://github.com/BrunoNicholas/iReporter/wiki) Work Procedure
+2. [Challenge 2](https://github.com/BrunoNicholas/iReporter/wiki/Creation-of-an-API-endpoints) Work Process Guidelines
+  
 ## How the API works
+
 _This project works on the URLs below for the operations of the HTTP resources_
 
 | REQUEST | ROUTE | FUNCTIONALITY |
@@ -42,7 +45,8 @@ _This project works on the URLs below for the operations of the HTTP resources_
 | *GET* | ```/api/v1/interventions/<int_id>/edit``` | _Returns a specific intervention for editing_|
 | *DELETE* | ```/api/v1/interventions/<int_id>``` | _Deletes a specific intervention record_|
 
-Heroku: This app is hosted at [iReporter API](https://ireporter-v01.herokuapp.com/) web!
+Heroku: This app is hosted at [iReporter API](https://ireporter-v01.herokuapp.com/api/v1/) web!
+
 GitHub Pages: Find the user interface via [iReporter UI](https://brunonicholas.github.io/iReporter/) web!
 
 ## SETTING UP THE APPLICATION ON YOUR DESKTOP
