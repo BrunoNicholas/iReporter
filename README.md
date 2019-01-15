@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/BrunoNicholas/iReporter.svg?branch=Develope)](https://travis-ci.org/BrunoNicholas/iReporter)
-
-(https://coveralls.io/repos/github/BrunoNicholas/iReporter/badge.svg?branch=Develope)](https://coveralls.io/github/BrunoNicholas/iReporter?branch=Develope)
+[![Coverage Statusgit](https://coveralls.io/repos/github/BrunoNicholas/iReporter/badge.svg)](https://coveralls.io/github/BrunoNicholas/iReporter)
 
 # iReporter | The API Endpoints
 iReporter is a simple web application that enables any/every citizen to bring any form of corruption to the notice of appropriate authorities and the general public.
