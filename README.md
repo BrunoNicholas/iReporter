@@ -1,5 +1,6 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/54ee29e6553e4cf7ac04e2e058e918dd)](https://app.codacy.com/app/BrunoNicholas/iReporter?utm_source=github.com&utm_medium=referral&utm_content=BrunoNicholas/iReporter&utm_campaign=Badge_Grade_Dashboard)
-![Build Status](https://travis-ci.org/BrunoNicholas/iReporter.svg?branch=Develope) [![Coverage Status](https://coveralls.io/repos/github/BrunoNicholas/iReporter/badge.svg?branch=Develope)](https://coveralls.io/github/BrunoNicholas/iReporter?branch=Develope)
+![Build Status](https://travis-ci.org/BrunoNicholas/iReporter.svg?branch=Develope) 
+[![Coverage Status](https://coveralls.io/repos/github/BrunoNicholas/iReporter/badge.svg?branch=Develope)](https://coveralls.io/github/BrunoNicholas/iReporter?branch=Develope)
 
 # iReporter | The API Endpoints
 iReporter is a simple web application that enables any/every citizen to bring any form of corruption to the notice of appropriate authorities and the general public.
