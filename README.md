@@ -1,5 +1,6 @@
+[![Build Status](https://travis-ci.org/BrunoNicholas/iReporter.svg?branch=Develope)](https://travis-ci.org/BrunoNicholas/iReporter)
+[![Coverage Status](https://coveralls.io/repos/github/BrunoNicholas/iReporter/badge.svg)](https://coveralls.io/github/BrunoNicholas/iReporter)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/54ee29e6553e4cf7ac04e2e058e918dd)](https://app.codacy.com/app/BrunoNicholas/iReporter?utm_source=github.com&utm_medium=referral&utm_content=BrunoNicholas/iReporter&utm_campaign=Badge_Grade_Dashboard)
-![Build Status](https://travis-ci.org/BrunoNicholas/iReporter.svg?branch=Develope) 
 [![Coverage Status](https://coveralls.io/repos/github/BrunoNicholas/iReporter/badge.svg?branch=Develope)](https://coveralls.io/github/BrunoNicholas/iReporter?branch=Develope)
 
 # iReporter | The API Endpoints
@@ -8,11 +9,12 @@ iReporter is a simple web application that enables any/every citizen to bring an
 In this case, users can also report on things that needs government intervention.
 
 ### The Challenges
-  1. [Challenge 1](https://github.com/BrunoNicholas/iReporter/wiki) Work Procedure
-  2. [Challenge 2](https://github.com/BrunoNicholas/iReporter/wiki/Creation-of-an-API-endpoints) Work Process Guidelines
-  
 
+1. [Challenge 1](https://github.com/BrunoNicholas/iReporter/wiki) Work Procedure
+2. [Challenge 2](https://github.com/BrunoNicholas/iReporter/wiki/Creation-of-an-API-endpoints) Work Process Guidelines
+  
 ## How the API works
+
 _This project works on the URLs below for the operations of the HTTP resources_
 
 | REQUEST | ROUTE | FUNCTIONALITY |
@@ -44,34 +46,34 @@ _This project works on the URLs below for the operations of the HTTP resources_
 | *GET* | ```/api/v1/interventions/<int_id>/edit``` | _Returns a specific intervention for editing_|
 | *DELETE* | ```/api/v1/interventions/<int_id>``` | _Deletes a specific intervention record_|
 
+Heroku: This app is hosted at [iReporter API](https://ireporter-v01.herokuapp.com/api/v1/) web!
 
-Heroku: This app is hosted at [iReporter](https://ireporter-v01.herokuapp.com/) web!
+GitHub Pages: Find the user interface via [iReporter UI](https://brunonicholas.github.io/iReporter/) web!
 
 ## SETTING UP THE APPLICATION ON YOUR DESKTOP
+
 1. Get an empty folders where to place the project
 
-   Either download the project and extract it in the new empty folder or copy the link to clone it as
-   
-   ```git clone https://github.com/BrunoNicholas/iReporter.git```
-   
+   Either download the project and extract it in the new empty folder or copy the link to clone it as ```git clone https://github.com/BrunoNicholas/iReporter.git```
+  
 2.Hopefully you installed python, create a virtual environment 
 
 e.g. ```venv``` and activate it with the operating system you have.
 
    i.e. ```#source venv/bin/activate``` for linux, or ```#venv/Scripts/activate.bat``` for windows 
 
-3. Install all required packages while inside the folder as below
+3.Install all required packages while inside the folder as below
 
    ```pip3 install -r requirements.txt```
-   
-4. Start the application as 
+4.Start the application as. 
 
-   ```python run.py```
-   
-5. User the routes above for checking the API and the UI for navigating through the user interface
+  ```python run.py```
+
+5.User the routes above for checking the API and the UI for navigating through the user interface
 Thanks!
 
 ------------------------------------------------------------------------------------------
+
 *Developed By*
 
 **Bruno Nicholas Sserunkuma**, **sbnibro256@gmail.com**
