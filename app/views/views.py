@@ -3,7 +3,7 @@ from flask import Blueprint, jsonify, request
 from ..controllers.user_controller import UserController
 from ..controllers.red_flag_controller import RedFlagController
 from ..controllers.intervention_controller import InterventionController
-from ..models.db.ireporter import UsersData, RedFlagsData, InterventionsData, LocatorData
+from ..models.db.ireporter import UsersData, RedFlagsData, InterventionsData
 
 # from ..models.locator import GeoLocator
 
@@ -14,7 +14,6 @@ ireporter_app = Blueprint('ireporter_app', __name__)
 all_users = UsersData()
 all_redFlags = RedFlagsData()
 all_interventions = InterventionsData()
-locations = LocatorData()
 
 ctr_user 	= UserController()
 ctr_inter 	= InterventionController()
