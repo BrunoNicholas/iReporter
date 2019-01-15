@@ -22,7 +22,7 @@ function showMap(lat, lon) {
 
 	// Create the Map Options
 	var mapOptions = {
-	  zoom: 10,
+	  zoom: 15,
 	  center: myLatLng,
 	  mapTypeId: google.maps.MapTypeId.ROADMAP
 	};

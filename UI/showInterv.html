@@ -64,9 +64,15 @@
         </aside>
         <aside class="main-right">
             <div class="main-home main-inner-top">
-                <li>Rejected <b>0</b></li>
-                <li>Red-Flags <b>0/0</b></li>
-                <li>Interventions <b>0/0</b></li>
+                <li title="Rejected Red-Flags and Interventions">Rejected
+                    <b>2</b>
+                </li>
+                <li title="Pending Red Flags">Red-Flags
+                    <b>3/11</b>
+                </li>
+                <li title="Pending Interventions">Interventions
+                    <b>4/20</b>
+                </li>
             </div>
             <div class="main-home main-inner-bottom">
                 <form class="form" action="">
@@ -100,10 +106,10 @@
                     </div>
                     <div class="f-group">
                         <label class="form-lable">Intervention Status</label>
-                        <input name="status" class="input-text label-item" value="Pending">
+                        <input name="status" class="input-text label-item" value="Pending" disabled>
                     </div>
                     <div class="f-group">
-                        <button type="submit" class="side-buttons danger form-button" style="margin-left: 35%;">DELETE
+                        <button type="submit" class="side-buttons danger form-button" style="margin-left: 35%;" onclick="return confirm('Do you really want to delete this intervention record?')">DELETE
                             INTERVENTION</button>
                     </div>
                 </form>

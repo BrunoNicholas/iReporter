@@ -112,6 +112,7 @@ a, a:hover {
 .main-inner-bottom table {
 	border: thin solid #7c334f;
 	border-collapse: collapse;
+	border-radius: 3px;
 	width: 100%;
 }
 .main-inner-bottom th, .main-inner-bottom td {
@@ -186,5 +187,6 @@ a, a:hover {
 	margin: 2px;
 	max-width: 60px;
 	padding: 2px 3px;
+	border-radius: 3px;
 	display: inline-block;
 }
