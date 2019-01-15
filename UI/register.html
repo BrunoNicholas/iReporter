@@ -33,11 +33,17 @@
 				</aside>
 				<aside class="box-body box-right">
 					<h3>Register | iReporter</h3>
-					<form>
+					<form action="home.html">
 						<input type="text" class="input-text" name="name" placeholder="Full Names" required="required" autofocus>
 						<input type="email" class="input-text" name="email" placeholder="Email">
-						<input type="password" class="input-text" name="password" placeholder="Password" required="required">
-						<input type="password" class="input-text" name="password_confirm" placeholder="Confirm Password" required="required">
+						<input type="password" min="6" class="input-text" name="password" placeholder="Password" required="required">
+						<input type="password" min="6" class="input-text" name="password_confirm" placeholder="Confirm Password" required="required">
+						<div class="input-text">
+							<input type="radio" name="account" value="user" checked="checked">
+							<label>User Account</label>
+							<input type="radio" name="account" value="admin">
+							<label>Admin Account</label>
+						</div>
 						<br>
 						<input type="checkbox" name="terms_agreement" required="required"> Agree with <a href="terms.html">Terms &amp; Conditions</a>
 						<br><br>
