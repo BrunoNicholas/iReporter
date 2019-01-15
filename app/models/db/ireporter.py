@@ -30,17 +30,5 @@ class InterventionsData:
 
     def table(self, values=None):
         if values:
-            self.interventions.append(values)
-        return self.interventions
-
-
-class LocatorData:
-    """ This list stands as the database table for the location coordinates on the map """
-
-    def __init__(self):
-        self.locations = []
-
-    def table(self, values=None):
-        if values:
-            self.locations.append(values)
-        return self.locations
+            self.interventions.append(values) 
+        return self.interventions 
