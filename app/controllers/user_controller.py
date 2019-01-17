@@ -66,7 +66,6 @@ class UserController:
 
     def update(self, user_id):
         """ this function stores an update of a user's details """
-
         try:
             data = request.json
             stored_user = [usr for usr in self.sys_users.table() if usr['user_id'] == user_id]
@@ -89,5 +88,3 @@ class UserController:
 
         except IndexError:
             return jsonify({'error': 'Not found, User unavailable'}), 400
-
-            
