@@ -96,7 +96,7 @@ class InterventionController:
     def destroy(self, int_id):
         """ this function reads an intervention's details and deletes them """
         try:
-            saved_interv = [interv for interv in self.sys_interventions.table() if interv['int_id'] == int_id]
+            saved_interv = [interv for interv in self.sys_interventions.table() if int(interv['int_id']) == int(int_id])
             
             self.sys_interventions.table().remove(int_id)
             return jsonify({'Message': 'Intervention record deleted successfully!'},{'Intervention {}'.format(int_id):saved_interv}), 200
