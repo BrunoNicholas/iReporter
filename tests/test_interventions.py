@@ -6,8 +6,9 @@ import json
 
 class InterventionTestCase(unittest.TestCase):
 	def setup(self):
-		self.app = create_app(config_name="testing_interventions")
-
+		# self.app = create_app(config_name="testing_interventions")
+		pass
+		
 	def tearDown(self):
 		pass
 

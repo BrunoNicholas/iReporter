@@ -5,8 +5,9 @@ import json
 
 class RegisterTestCase(unittest.TestCase):
 	def setup(self):
-		self.app = create_app(config_name="testing_auths")
-
+		# self.app = create_app(config_name="testing_auths")
+		pass
+	
 	def test_register_function (self):
 		pass
         
