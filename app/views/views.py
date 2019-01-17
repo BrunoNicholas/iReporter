@@ -34,7 +34,7 @@ def red_flags():
 @ireporter_app.route('/red-flags', methods=['POST'])  # saving one
 def store_red_flags():
     if request.content_type != JSON_MIME_TYPE:
-        return jsonify({'status':406,'error': 'Invalid Content Type - use JSON'}), 406
+        return jsonify({'status':406,'error': 'Invalid Red Flag Content Type - use JSON'}), 406
     return ctr_flag.store()
 
 
@@ -75,7 +75,7 @@ def interventions():
 @ireporter_app.route('/interventions', methods=['POST'])  # saving one
 def store_intervention():
     if request.content_type != JSON_MIME_TYPE:
-        return jsonify({'status':406,'error': 'Invalid Content Type - use JSON'}), 406
+        return jsonify({'status':406,'error': 'Invalid intervention Content Type - use JSON'}), 406
     return ctr_inter.store()
 
 
@@ -92,7 +92,7 @@ def show_intervention(int_id):
 @ireporter_app.route('/interventions/<int:int_id>', methods=['PUT'])  # update one
 def update_intervention(int_id):
     if request.content_type != JSON_MIME_TYPE:
-        return jsonify({'status':406,'error': 'Invalid Content Type - use JSON'}), 406
+        return jsonify({'status':406,'error': 'Can not update intervention invalid content type - use JSON'}), 406
     return ctr_inter.update(int_id)
 
 
@@ -116,7 +116,7 @@ def stored_users():
 @ireporter_app.route('/users', methods=['POST'])  # saving one
 def store_user():
     if request.content_type != JSON_MIME_TYPE:
-        return jsonify({'status':406,'error': 'Invalid Content Type - use JSON'}), 406
+        return jsonify({'status':406,'error': 'Process Terminated Invalid User Content Type - use JSON'}), 406
     return ctr_user.store()
 
 
@@ -139,7 +139,7 @@ def edit_user(user_id):
 @ireporter_app.route('/users/<int:user_id>', methods=['PUT'])  # update one
 def update_user(user_id):
     if request.content_type != JSON_MIME_TYPE:
-        return jsonify({'status':406,'error': 'Invalid Content Type - use JSON'}), 406
+        return jsonify({'status':406,'error': 'Cannot upadate user, Invalid Content Type - use JSON'}), 406
     return ctr_user.update(user_id)
 
 

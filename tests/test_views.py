@@ -6,7 +6,9 @@ import json
 
 class ViewTestCase(unittest.TestCase):
 	def setup(self):
-		self.user = []
+		self.users = []
+		self.interventions = []
+		self.red_flags = []
 
 	def tearDown(self):
 		pass
