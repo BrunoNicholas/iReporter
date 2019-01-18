@@ -67,6 +67,7 @@ e.g. ```venv``` and activate it with the operating system you have.
 3.Install all required packages while inside the folder as below
 
    ```pip3 install -r requirements.txt```
+
 4.Start the application as. 
 
   ```python run.py```
