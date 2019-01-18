@@ -13,7 +13,7 @@ window.onload = function() {
 	  // Print out a message to the user.
 	  document.write('This does not support GeoLocation');
 	}
-}
+};
 
 // Show the user's position on a Google map.
 function showMap(lat, lon) {

@@ -31,7 +31,6 @@ pylint==2.2.1
 pytest==4.0.1
 pytest-cov==2.6.1
 pytz==2018.7
-PyYAML==3.13
 requests==2.20.1
 six==1.11.0
 travis==0.0.3
