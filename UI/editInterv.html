@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <title>Edit Interventions | iReporter</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Bruno Nicholas Sserunkuma">
+    <meta name="email" content="sbnibro256@gmail.com">
+    <meta name="description" content="iReporter is a simple web application that enables any/every citizen to bring any form of corruption to the notice of appropriate authorities and the general public.">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="shortcut icon" type="image/jpg" href="assets/images/red-flag.png">
+</head>
+
+<body>
+    <header>
+        <div class="border-outer">
+            <h2>
+                <big>iReporter</big>
+                <br>
+                <small>Where citizens bring any form of corruption to the notice of appropriate authorities and the
+                    general public</small>
+            </h2>
+            <nav>
+                <a href="index.html">
+                    <li>Logout</li>
+                </a>
+                <a href="terms.html">
+                    <li>Terms</li>
+                </a>
+                <a href="admin.html">
+                    <li>Admin</li>
+                </a>
+                <a href="interventions.html">
+                    <li>Interventions</li>
+                </a>
+                <a href="flags.html">
+                    <li>Red Flags</li>
+                </a>
+                <a href="home.html">
+                    <li>Home</li>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <aside class="main-left">
+            <img src="assets/images/fav.jpg">
+            <hr>
+            <br><a href="home.html">
+                <button type="button" class="side-buttons success"> Home </button>
+            </a>
+            <br>
+            <hr>
+            <a href="profile.html">
+                <button type="button" class="side-buttons primary">Profile</button>
+            </a>
+        </aside>
+        <aside class="main-right">
+            <div class="main-home main-inner-top">
+                <li title="Rejected Red-Flags and Interventions">Rejected
+                    <b>2</b>
+                </li>
+                <li title="Pending Red Flags">Red-Flags
+                    <b>3/11</b>
+                </li>
+                <li title="Pending Interventions">Interventions
+                    <b>4/20</b>
+                </li>
+            </div>
+            <div class="main-home main-inner-bottom">
+                <form class="form" action="">
+                    <div class="f-group">
+                        <label class="form-lable">Title</label>
+                        <input type="text" name="title" class="input-text label-item" placeholder="Intervention Title">
+                    </div>
+                    <div class="f-group">
+                        <label class="form-lable">Description</label>
+                        <textarea name="description" class="input-text label-item" placeholder="Full Description">There are high floods in the Bwaise maerket and this has been the situation for years.</textarea>
+                    </div>
+                    <div class="f-group">
+                        <label class="form-lable">Geolocation Coordinates</label>
+                        <!-- <div class="form-double"> -->
+                        <div class="input-text label-item">
+                            <input type="number" name="title" class="" placeholder="Latitudes" style="width: 45%; margin: 0px; padding: 5px; text-align: center;" value="2.443">
+                            <!-- input-text label-item label-item-left -->
+                            <input type="number" name="title" class="" placeholder="Longitudes" style="width: 45%; margin: 0px; padding: 5px; text-align: center;" value="-3.154">
+                            <!-- input-text label-item label-item-right -->
+                        </div>
+                    </div>
+                    <div class="f-group">
+                        <label class="form-lable">Attach Image/Video</label>
+                        <div class="input-text label-item">
+                            <input type="file" name="attach" accept=".mp4, .jpg, .png, .3pg, .mpeg, .mpg" style="width: 100%;">
+                        </div>
+                    </div>
+                    <div class="f-group">
+                        <label class="form-lable">Message Options</label>
+                        <select name="status" class="input-text label-item">
+                            <option value="Pending">Pending</option>
+                            <option value="Under Investigation">Under Investigation</option>
+                            <option value="Rejected">Rejected</option>
+                            <option value="Approved">Approved</option>
+                            <option value="Resolved">Resolved</option>
+                        </select>
+                    </div>
+                    <div class="f-group" style="text-align: right;">
+                        <button type="submit" class="side-buttons success form-button">Update Intervention</button>
+                    </div>
+                </form>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <div class="border-outer" style="padding: 5px;">
+            &copy;2018 iReporter <br>
+            Andela Bootcamp | Cohort 15 <br>
+            Bruno Nicholas Sserunkuma <br>
+            sbnibro256@gmail.com <br>
+        </div>
+    </footer>
+</body>
+
+</html>
